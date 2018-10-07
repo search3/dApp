@@ -11,11 +11,11 @@ npm install http-server -g
 
 ## Install and Setup meta-mask on chrome
 
-MAKE SURE YOU USE THE OLD VERSION OF METAMASK
+1. MAKE SURE YOU USE THE OLD VERSION OF METAMASK
 
-Click through to make first account (just make up random stuff for mnemonic phrases, this will be thrown away)
+2. Click through to make first account (just make up random stuff for mnemonic phrases / 123 for password, this will be thrown away)
 
-Then import a new account using below credentials
+3. In the top right, click button to switch accounts > Import Account
 
 # Execution Flow
 
