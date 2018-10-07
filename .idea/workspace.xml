@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="270e72a2-441e-4327-ad3a-dfc76fb54c7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/qin.sol" beforeDir="false" afterPath="$PROJECT_DIR$/qin.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/truffled_src/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/truffled_src/build/contracts/Migrations.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/truffled_src/build/contracts/ReferralTree.json" beforeDir="false" afterPath="$PROJECT_DIR$/truffled_src/build/contracts/ReferralTree.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/truffled_src/contracts/ReferralTree.sol" beforeDir="false" afterPath="$PROJECT_DIR$/truffled_src/contracts/ReferralTree.sol" afterDir="false" />
-    </list>
+    <list default="true" id="270e72a2-441e-4327-ad3a-dfc76fb54c7a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/truffled_src/contracts/ReferralTree.sol">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="357">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -245,7 +240,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538927862748" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538931611034" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -274,12 +269,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538909261919</updated>
       <workItem from="1538909263177" duration="12284000" />
-      <workItem from="1538927539880" duration="323000" />
+      <workItem from="1538927539880" duration="1776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12607000" />
+    <option name="totallyTimeSpent" value="14060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1922" height="997" extended-state="6" />
@@ -374,8 +369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/truffled_src/contracts/ReferralTree.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
