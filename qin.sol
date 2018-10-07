@@ -5,6 +5,10 @@ contract ReferralTree {
 	address public founder = 0xca35b7d915458ef540ade6068dfe2f44e8fa733c;
 
 	// The question link the user asks
+	string modelHash;
+	string photoHash;
+	string expectedHashValue;
+
 	string questionLink;
 	address ownerAddr;
 	uint256 reward;
@@ -25,12 +29,16 @@ contract ReferralTree {
 
 	// Used for payment (with checkpointing)
 	uint256 nextPayeeIndex;
-	uint256 payedOutNodes; 
+	uint256 payedOutNodes;
 
 
     // Constructor for tree
-	constructor (string _questionLink) payable public {
-        questionLink = _questionLink;
+	constructor (string _questionLink, string _modelHash, string _photoHash, string _expectedHashValue) payable public {
+		modelHash = _modelHash;
+		photoHash = _photoHash;
+		expectedHashValue = _expectedHashValue;
+
+		questionLink = _questionLink;
 		ownerAddr = msg.sender;
 		reward = msg.value;
 		backwardMap[msg.sender] = 0;
@@ -101,6 +109,18 @@ contract ReferralTree {
     // Getter for questionLink
     function getQuestionLink() public view returns (string){
         return questionLink;
+    }
+
+	function getmodelHash() public view returns (string){
+        return modelHash;
+    }
+
+    function getphotoHash() public view returns (string){
+        return photoHash;
+    }
+
+    function getexpectedHashValue() public view returns (string){
+        return expectedHashValue;
     }
 
     // Getter for visualizing tree

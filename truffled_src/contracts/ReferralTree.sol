@@ -7,8 +7,12 @@ pragma solidity ^0.4.24;
 // Putting down money in payin
 
 contract ReferralTree {
-
+	ERC20 dai;
 	address public founder = 0xca35b7d915458ef540ade6068dfe2f44e8fa733c;
+
+	string modelHash;
+	string photoHash;
+	string expectedHashValue;
 
 	// The question link the user asks
 	string questionLink;
@@ -36,8 +40,13 @@ contract ReferralTree {
 
 
     // Constructor for tree
-	constructor (string _questionLink) payable public {
-        questionLink = _questionLink;
+	constructor (string _questionLink, string _modelHash, string _photoHash, string _expectedHashValue) payable public {
+//		dai = ERC20(_dai);
+		modelHash = _modelHash;
+		photoHash = _photoHash;
+		expectedHashValue = _expectedHashValue;
+
+		questionLink = _questionLink;
 		ownerAddr = msg.sender;
 		reward = msg.value;
 		backwardMap[msg.sender] = 0;
@@ -46,6 +55,17 @@ contract ReferralTree {
 		addrToIndexMap[msg.sender] = addressArray.length;
     }
 
+	function getmodelHash() public view returns (string){
+		return modelHash;
+	}
+
+	function getphotoHash() public view returns (string){
+		return photoHash;
+	}
+
+	function getexpectedHashValue() public view returns (string){
+		return expectedHashValue;
+	}
 
 	// referral code is parent address also
 	function registerNode(address referralCodeAlsoParentAddr) {
@@ -71,12 +91,18 @@ contract ReferralTree {
         return reward;
     }
 
+	event Sighting(
+		address indexed _from,
+		string _attempt
+	);
+
 	// Allows a node to attempt an Answer
 	function attemptAnswer(string attempt) public {
 		// Check later
 		address send = msg.sender;
 // 		require( bytes(answerMap[msg.sender]).length == 0);
 		answerMap[msg.sender] = attempt;
+		emit Sighting(msg.sender, attempt);
 	}
 
 	// Modifier to restrict access
@@ -110,7 +136,7 @@ contract ReferralTree {
         return questionLink;
     }
 
-    // Getter for visualizing tree
+	// Getter for visualizing tree
     // function viewForward
 
     // Returns index at which we left off payment
@@ -145,6 +171,7 @@ contract ReferralTree {
 		        toPayAmount = (reward/ (2**(payedOutNodes + 1)));
 			    toPayAddr.transfer(toPayAmount);
 
+//				require(dai.transferFrom(msg.sender, this, _paymentPool));
 			    toPayAddr = backwardMap[toPayAddr];
 			    i = addrToIndexMap[toPayAddr] - 1;
 			    payedOutNodes = payedOutNodes + 1;
